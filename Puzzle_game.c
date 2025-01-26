@@ -152,11 +152,8 @@ void swap(int x,int y){         //to swap zero with respect to the users input
 int win(){         //to check weather the game is over or not .i.e, all the numbers are in ascending order or not
     int count=0;
     for(int i=0;i<16;i++){
-        if(_box[i]==box[i])
-            count++;
+        if(_box[i]!=box[i])
+            return i;
     }
-    if(count == 16)
-        return -1;           //game is completed
-    else 
-        return count;           
+    return -1;      //game is completed
 }
